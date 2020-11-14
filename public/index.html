@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>document</title>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <h1 class="text-center mt-4">Requistion form for booking of Accomodation</h1>
+
+        <br />
+        <br />
+
+        <h2>1. Visitors and booking details</h2>
+
+        <form method="POST" action="/Createform">
+            <div class="row">
+                <div class="col">
+                    <input type="text" class="form-control" placeholder=" Name" id="name" name="name">
+                    <br />
+                    <input type="text" class="form-control" placeholder=" Address" id="address" name="address">
+                    <br />
+                    <input type="tel" class="form-control" placeholder="Mob.No" id="mobNO" name="mobNO">
+                    <br />
+                    <p>No. of persons (max 2 persons per room)</p>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="persons" id="lodging" value="lodging">
+                        <label class="form-check-label" for="lodging">lodging</label>
+
+                        <input class="form-check-input" type="radio" name="persons" id="food" value="food">
+                        <label class="form-check-label" for="food">food</label>
+                    </div>
+                    <br />
+                    <br />
+                    <select class="custom-select mr-sm-2" id="visitorsCategory" name="visitorsCategory">
+                        <option selected>Visitors Category</option>
+                        <option value="1">A</option>
+                        <option value="2">B</option>
+                        <option value="3">C</option>
+                        <option value="4">D</option>
+                        <option value="5">E</option>
+
+                    </select>
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Organization" id="organization"
+                        name="organization">
+                    <br />
+
+                    <select class="custom-select mr-sm-2" id="nationality" name="nationality">
+                        <option selected>Nationality</option>
+                        <option value="indian">Indian</option>
+                        <option value="foreign">foreign</option>
+
+                    </select>
+
+                    <br />
+                    <br />
+                    <input type="email" name="email" class="form-control" placeholder="Email" id="email">
+                    <br />
+
+                    <p>Type of rooms</p>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="roomType" id="suite" value="suite">
+                        <label class="form-check-label" for="suite">Suite</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="roomType" id="standard" value="standard">
+                        <label class="form-check-label" for="standard"">Standard room</label>
+                    </div>
+                    <br />
+                    <br />
+
+                    <input type=" text" class="form-control" placeholder="No. of rooms" name="countOfRooms"
+                            id="countOfRooms">
+                            <br />
+                    </div>
+                </div>
+
+
+                <h2>2. Bills to be settled by </h2>
+                <div class="row">
+                    <div class="col">
+                        <h4>Lodging</h4>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="lodgingBills" id="visitor"
+                                value="visitor" required />
+                            <label class="form-check-label" for="visitor">
+                                Visitor
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="lodgingBills" id="indentor"
+                                value="indentor" />
+                            <label class="form-check-label" for="indentor">
+                                Indentor
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="lodgingBills" id="department"
+                                value="department" />
+                            <label class="form-check-label" for="department">
+                                Department
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="lodgingBills" id="institute"
+                                value="institute" />
+                            <label class="form-check-label" for="institute">
+                                Institute
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="lodgingBills" id="projectCordinator"
+                                value="projectCordinator" />
+                            <label class="form-check-label" for="projectCordinator">
+                                Project Coordinator
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <h4>Food</h4>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="foodBills" id="visitor"
+                                value="visitor" />
+                            <label class="form-check-label" for="visitor">
+                                Visitor
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="foodBills" id="indentor"
+                                value="indentor" />
+                            <label class="form-check-label" for="indentor">
+                                Indentor
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="foodBills" id="department"
+                                value="department" />
+                            <label class="form-check-label" for="department">
+                                Department
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="foodBills" id="institute"
+                                value="institute" />
+                            <label class="form-check-label" for="institute">
+                                Institute
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="foodBills" id="projectCordinator"
+                                value="projectCordinator" />
+                            <label class="form-check-label" for="projectCordinator">
+                                Project Coordinator
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+                <br />
+
+                <h2>3. Indentors detail</h2>
+
+                <div class="row">
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder=" Name" name="indentorName"
+                            id="indentorName" />
+                        <br />
+                        <input type="text" class="form-control" placeholder="Emp Code" name="indentorCode"
+                            id="indentorCode" />
+                        <br />
+                        <input type="tel" class="form-control" placeholder="mobile" name="indentorMobile"
+                            id="indentorMobile" />
+
+
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder=" Designation" name="indentorDesignation"
+                            id="indentorDesignation" />
+                        <br />
+                        <input type="text" class="form-control" placeholder="Department" id="indentorDepartment"
+                            name="indentorDepartment" />
+                        <br />
+                        <input type="email" class="form-control" placeholder="email" id="indentorMail"
+                            name="indentorMail" />
+
+
+                    </div>
+
+
+
+                </div>
+                <br />
+                <button class="btn btn-primary" id="btn" type="submit">submit</button>
+        </form>
+    </div>
+
+    <script src="./indexForm.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
